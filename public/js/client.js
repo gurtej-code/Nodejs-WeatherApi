@@ -6,7 +6,7 @@ $(document).ready(()=>{
         $('#message-1').text("loading ...")
         $('#message-2').text("")
 
-        fetch('http://localhost:3000/?address='+location).then((response)=>{
+        fetch('?address='+location).then((response)=>{
             response.json().then((data)=>{
                 if(data.error){
                     $('#message-1').text(data.error)
